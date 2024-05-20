@@ -1,6 +1,11 @@
 import styles from './contact.module.css';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "Contact",
+  description: "Webgram page",
+};
+
 export default function Contact() {
   return (
     <div className={styles.container}>

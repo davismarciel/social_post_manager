@@ -6,6 +6,10 @@
   --btn: #3673df;
 }
 
+input {
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;

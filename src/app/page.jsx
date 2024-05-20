@@ -1,5 +1,11 @@
-import styles from "./home.module.css"
-import Image from "next/image"
+import Image from 'next/image';
+import styles from './home.module.css';
+import { deleteUser } from '@/lib/actions';
+
+export const metadata = {
+  title: ' Home | Webgram',
+  description: 'Webgram page',
+};
 
 export default function Home() {
   return (
@@ -12,12 +18,15 @@ export default function Home() {
           <button className={styles.button}>Contact</button>
         </div>
         <div className={styles.brands}>
-          <Image className={styles.brandImage} src="/brands.png" alt="Brands" fill/>
+          <Image className={styles.brandImage} src="/brands.png" alt="Brands" fill />
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image className={styles.heroImg} src="/hero.gif" alt="Hero" fill />
+        <Image className={styles.heroImg} unoptimized src="/hero.gif" alt="Hero" fill />
+      </div>
+      <div>
+        {deleteUser}
       </div>
     </div>
-  )
-} 
+  );
+}

@@ -1,7 +1,39 @@
-export default function AdminPage() {
+import { Suspense } from 'react';
+import styles from './admin.module.css';
+import AdminPosts from '@/components/adminPosts/adminPosts';
+import AdminPostForm from '@/components/AdminPostForm/adminPostForm';
+import AdminUsers from '@/components/AdminUsers/adminUsers';
+import AdminUserForm from '@/components/AdminUserForm/adminUserForm';
+import { auth } from '@/lib/auth';
+
+export default async function AdminPage() {
+  const session = await auth();
   return (
-    <>
-      <h1>Admin</h1>
-    </>
-  )
+    <div className={styles.container}>
+      <div className={styles.row}>
+        <div className={styles.col}>
+          <Suspense fallback={<div>Loading</div>}>
+            <AdminPosts />
+          </Suspense>
+        </div>
+        <div className={styles.col}>
+          <Suspense fallback={<div>Loading</div>}>
+            <AdminPostForm user_id={session.user.id} />
+          </Suspense>
+        </div>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.col}>
+          <Suspense fallback={<div>Loading</div>}>
+            <AdminUsers />
+          </Suspense>
+        </div>
+        <div className={styles.col}>
+          <Suspense fallback={<div>Loading</div>}>
+            <AdminUserForm />
+          </Suspense>
+        </div>
+      </div>
+    </div>
+  );
 }
