@@ -2,8 +2,8 @@ import Image from 'next/image';
 import styles from './about.module.css';
 
 export const metadata = {
-  title: "About",
-  description: "Webgram page",
+  title: 'About',
+  description: 'Webgram page',
 };
 
 export default function About() {

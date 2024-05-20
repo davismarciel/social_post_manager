@@ -38,5 +38,6 @@ module.exports = {
     'consistent-return': 0,
     'no-shadow': 0,
     'no-unused-expressions': 0,
+    'no-param-reassign': 0,
   },
 };
