@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📌 Social Post Manager
 
-## Getting Started
+Um sistema de gerenciamento de conteúdo e blog **full-stack** construído com **Next.js**, **React** e **MongoDB**.  
+A aplicação inclui **autenticação de usuários**, **painel de administração** e funcionalidades completas de **CRUD (Criar, Ler, Atualizar, Deletar)** para postagens.
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias Principais
+
+- **Framework:** [Next.js 14](https://nextjs.org/)
+- **Biblioteca de UI:** [React](https://react.dev/)
+- **Banco de Dados:** [MongoDB](https://www.mongodb.com/) com [Mongoose](https://mongoosejs.com/)
+- **Autenticação:** [NextAuth.js](https://next-auth.js.org/)
+- **Estilização:** CSS Modules
+
+---
+
+## 🛠️ Como Começar
+
+### ✅ Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) **v18.17.0 ou superior**
+- [Git](https://git-scm.com/)
+- [MongoDB](https://www.mongodb.com/try/download/community) (local ou via [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+
+---
+
+### 📥 Instalação e Configuração
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/davismarciel/social_post_manager.git
+   cd social_post_manager
+   ```
+
+2. **Instale as dependências:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente:**
+
+   - Crie um arquivo `.env` na raiz do projeto.
+   - Adicione as seguintes variáveis, substituindo pelos seus próprios valores:
+
+     ```env
+     MONGO="sua_string_de_conexao_mongodb"
+     GITHUB_ID="seu_id_do_cliente_github"
+     GITHUB_SECRET="seu_secret_do_cliente_github"
+     AUTH_SECRET="sua_chave_secreta_para_nextauth"
+     ```
+
+---
+
+### ▶️ Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📚 Funcionalidades
 
-## Learn More
+- 🔑 Autenticação de usuários via GitHub
+- 📝 CRUD completo para postagens
+- 📊 Painel de administração
+- 🎨 Estilização modular com **CSS Modules**
+- 🌐 Integração com **MongoDB** para persistência de dados
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Licença
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto é de uso livre para estudo e aprimoramento.  
+Sinta-se à vontade para contribuir! 🚀
